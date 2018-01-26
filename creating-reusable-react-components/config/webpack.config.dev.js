@@ -165,6 +165,9 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
+                  // uncomment it if you want to turn on CSS Modules (but this has to be adopted everywhere as it is can break global styles)
+                  // modules: true,
+                  // localIdentName: '[name]_[local]_[hash:base64:5]'
                 },
               },
               {
