@@ -1,7 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import PasswordInput from './PasswordInput';
-import {shallow} from 'enzyme';
+import {shallow, configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 test('toggles input type when show/hide password clicked', () => {
   const wrapper = shallow(<PasswordInput
